@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'bcrypt'
 gem 'jwt'
+gem 'simple_command'
 
 
 group :development, :test do
