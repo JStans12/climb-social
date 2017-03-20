@@ -10,7 +10,7 @@ class RefreshUser
     find_user
     tokens = {}
     tokens[:auth]    = JsonWebToken.encode(user_id: @user.id) if @user
-    tokens[:refresh] = GenerateRefreshToken.call(@user.email, device).result
+    tokens[:refresh] = GenerateRefreshToken.call(@user.email, device).result if @user
     return tokens
   end
 
